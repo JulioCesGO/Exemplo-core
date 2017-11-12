@@ -3,41 +3,32 @@
   <groupId>br.com.alfa.posgraduacao.exemplo</groupId>
   <artifactId>core</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  	<distributionManagement>
-  
-        <repository>
-            <id>nexus-releases</id>
-            <name>Repositorio de Releases</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
-        </repository>
-  		<snapshotRepository>
-  			<id>nexus-snapshots</id>
-            <name>Repositorio de Releases</name>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
-  		</snapshotRepository>
-    </distributionManagement>
-    
-	<repositories>
-		<repository>
-			<id>maven-group</id>
-			<url>http://localhost:8081/repository/maven-public/</url>
-		</repository>
-		
-	</repositories>
-  
 
-	<packaging>jar</packaging>
-	<dependencies>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>5.1.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>5.1.3.Final</version>
-		</dependency>
-	</dependencies>
-
+  <dependencies>
+  		<dependency>
+  			<groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-core</artifactId>
+  			<version>5.1.0.Final</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-validator</artifactId>
+  			<version>5.1.3.Final</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.springframework</groupId>
+  			<artifactId>spring-context</artifactId>
+  			<version>4.3.12.Release</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>javax.transaction</groupId>
+  			<artifactId>javax.transaction-api</artifactId>
+  			<version>1.2</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.springframework.data</groupId>
+  			<artifactId>spring-data-jpa</artifactId>
+  			<version>1.11.8.Release</version>
+  		</dependency>
+  	</dependencies>
 </project>
