@@ -67,6 +67,8 @@ public class Pessoa implements Serializable {
 	public boolean equals(Object obj) {
 		if (obj == null)
 			return false;
+		if (!obj.getClass().equals(Pessoa.class))
+			return false;
 		try
 		{
 			Pessoa pessoa = (Pessoa) obj;
@@ -79,4 +81,9 @@ public class Pessoa implements Serializable {
 		
 	}
 	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return super.hashCode();
+	}
 }
