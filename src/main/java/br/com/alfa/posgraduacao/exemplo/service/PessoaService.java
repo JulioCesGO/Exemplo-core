@@ -18,9 +18,9 @@ public class PessoaService {
 	private PessoaRepositorio pessoaRepositorio;
 	
 	@Transactional
-	public void Salvar(Pessoa pessoa)
+	public Pessoa Salvar(Pessoa pessoa)
 	{
-		pessoaRepositorio.save(pessoa);
+		return pessoaRepositorio.save(pessoa);
 	}
 	
 	

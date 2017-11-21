@@ -1,19 +1,25 @@
 package br.com.alfa.posgraduacao.exemplo.modelo;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.br.CNPJ;
 
 @Entity
-public class Pessoa  {
+public class Pessoa implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long codigo;
+	@NotNull
 	private String nome;
+	@Min(3)
 	private Integer idade;
 	@CNPJ
 	private String cnpj;
@@ -57,5 +63,18 @@ public class Pessoa  {
 		this.cnpj = cnpj;
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		try
+		{
+			Pessoa pessoa = (Pessoa) obj;
+			return pessoa.getCodigo().equals(this.getCodigo());
+			
+		} catch( Exception e)
+		{
+			return false;
+		}
+		
+	}
 	
 }
