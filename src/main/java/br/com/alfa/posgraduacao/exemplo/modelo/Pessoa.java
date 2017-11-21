@@ -65,6 +65,8 @@ public class Pessoa implements Serializable {
 	
 	@Override
 	public boolean equals(Object obj) {
+		if (obj == null)
+			return false;
 		try
 		{
 			Pessoa pessoa = (Pessoa) obj;
