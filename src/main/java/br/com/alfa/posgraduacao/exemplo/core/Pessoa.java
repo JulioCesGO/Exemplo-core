@@ -11,7 +11,7 @@ import org.hibernate.validator.constraints.br.CNPJ;
 public class Pessoa  {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long codigo;
 	private String nome;
 	private Integer idade;
